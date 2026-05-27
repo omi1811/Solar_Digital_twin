@@ -72,7 +72,7 @@ The key pipeline from `main.py` is:
 
 - `fetch_solar_data.py` → generates raw solar inputs
 - Simulink `PVArrayGrid.slx` (run via MATLAB `sim`) → `sim_to_csv` exports
-- `ETL.py` merges and creates `merged_by_session.csv`
+- `ETL.py` merges and creates `merged_by_session.csv` and uploads the data to Azure Blob cloud storage.
 - `arima.py` runs `train_sarima(...)`
 - `Fault_Detection.py` runs `detect_faults(...)` → `faults_detected.csv`
 - `visualizer.py` produces dashboards/plots and `final_output.csv`
