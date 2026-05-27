@@ -67,15 +67,6 @@ This project includes Simulink project artifacts and compiled acceleration files
 
 The repository orchestration is implemented in `main.py`. A system architecture diagram is provided as `PVGrid.svg` (vector). It shows how data flows from sources through fetching and simulation, into the ETL pipeline, then into analytics, fault detection, and visualization.
 
-If you need a raster `PVGrid.png`, convert the SVG locally with ImageMagick or Inkscape:
-
-```powershell
-# ImageMagick
-magick PVGrid.svg PVGrid.png
-
-# or Inkscape
-inkscape PVGrid.svg --export-filename=PVGrid.png
-```
 
 The key pipeline from `main.py` is:
 
